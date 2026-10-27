@@ -35,6 +35,6 @@ class ShortUrlController extends Controller
                 ->with('success', 'Short URL created: ' . $shortUrl->short_url);
         }
 
-        return view('member.create-url');
+        return redirect()->back()->with('error', 'Invalid request.');
     }
 }

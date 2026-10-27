@@ -40,6 +40,6 @@ class ClientController extends Controller
                 ->with('success', 'Company created!');
         }
 
-        return view('superadmin.invite');
+        return redirect()->back()->with('error', 'Invalid request.');
     }
 }
